@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css">
+      </head>
+    <body>
+        <div>
+            <h1>Welcome to the Mower Emporium!</h1>
+        </div>
+        <form action="customerBackend.php" method="post" id="orderForm" onsubmit="return validateForm();">
+            <ul>
+                <li>
+                    <div>
+                        <img id="handimg" src="images/hand.jpg">
+                        <p>Push Lawn Mower - $70.00</p>
+                        <input type="number" id="handNum" name="handNum" placeholder="Quantity" min="0" required>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img id="mowerimg" src="images/mower.jpg">
+                        <p>Gas Lawn Mower - $260.00</p>
+                        <input type="number" id="mowNum" name="mowNum" placeholder="Quantity" min="0" required>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img id="milkeimg" src="images/mike.jpg">
+                        <p>Mike's Lawn Mower (needs work, limit 1) - $150.00</p>
+                        <input type="number" id="mikeNum" name="mikeNum" placeholder="Quantity" min="0" required>
+                    </div>
+                </li>
+                <li>
+                    <h3>Shipping Options</h3>
+                    <input type="radio" name="ship" id="fso" value="f"/>
+                    <label for="fso">7 Days - Free!</label>
+                    <input type="radio" name="ship" id="oso" value="o"/>
+                    <label for="oso">Overnight - $50.00</label>
+                    <input type="radio" name="ship" id="tso" value="t"/>
+                    <label for="tso">3 Day - $5.00</label>
+                </li>
+                <li>
+                    <h3>Customer Login Information</h3>
+                    <div>
+                        <label for="user">Customer E-mail:</label>
+                        <input type="email" id="user" name="email" placeholder="user@example.com">
+
+                    </div>
+                    <div>
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" name="password" required>
+                    </div>
+                </li>
+            </ul>
+            <input type="submit" value="Submit Order">
+            <input type="reset" value="Reset Form">
+        </form>
+        <script type="text/javascript" src="formChecker.js"></script>
+    </body>
+</html>
